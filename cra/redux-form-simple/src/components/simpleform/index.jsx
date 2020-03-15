@@ -1,8 +1,8 @@
-import React from 'react';
-import { Field, reduxForm } from 'redux-form';
+import React from 'react'
+import { Field, reduxForm } from 'redux-form'
 
 const SimpleForm = props => {
-  const { handleSubmit, pristine, reset, submitting } = props;
+  const { handleSubmit, pristine, reset, submitting } = props
   return (
     <form onSubmit={handleSubmit}>
       <div>
@@ -42,14 +42,16 @@ const SimpleForm = props => {
         <label>Sex</label>
         <div>
           <label>
-            <Field name="sex" component="input" type="radio" value="male" />
-            {' '}
+            <Field name="sex" component="input" type="radio" value="male" />{' '}
             Male
           </label>
           <label>
-            <Field name="sex" component="input" type="radio" value="female" />
-            {' '}
+            <Field name="sex" component="input" type="radio" value="female" />{' '}
             Female
+          </label>
+          <label>
+            <Field name="sex" component="input" type="radio" value="other" />{' '}
+            Other
           </label>
         </div>
       </div>
@@ -82,15 +84,17 @@ const SimpleForm = props => {
         </div>
       </div>
       <div>
-        <button type="submit" disabled={pristine || submitting}>Submit</button>
+        <button type="submit" disabled={pristine || submitting}>
+          Submit
+        </button>
         <button type="button" disabled={pristine || submitting} onClick={reset}>
           Clear Values
         </button>
       </div>
     </form>
-  );
-};
+  )
+}
 
 export default reduxForm({
-  form: 'simple', // a unique identifier for this form
-})(SimpleForm);
+  form: 'simple' // a unique identifier for this form
+})(SimpleForm)
