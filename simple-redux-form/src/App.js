@@ -29,7 +29,7 @@ function App() {
         
       />
       {/* <button onClick={()=>}>Pick File</button> */}
-      <button onClick={this.fileUploadHandler}></button>
+      <button onClick={fileUploadHandler}></button>
     </div>
   );
 }
